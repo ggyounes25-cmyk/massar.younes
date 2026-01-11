@@ -1,52 +1,46 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>منظومة نتائج - نسخة الهاتف</title>
+    <title>Dashboard | Calculateur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>نتائجي الدراسية (النسخة الاحترافية)</h2>
-    
-    <div class="table-container">
+    <div id="login-screen">
+        <div class="login-card">
+            <h2>Welcome</h2>
+            <p>Ready to check your results?</p>
+            <input type="text" id="user-fullname" placeholder="Enter your full name">
+            <button onclick="loginUser()">Get Started</button>
+        </div>
+    </div>
+
+    <div id="app-container" class="main-container" style="display:none;">
+        <header style="margin-bottom: 40px;">
+            <h1 style="margin:0; font-weight: 800;">2BAC Phisique</h1>
+            <p style="color: #94a3b8;">Firebase Connected - Real-time calculations</p>
+        </header>
+
         <table>
             <thead>
                 <tr>
-                    <th>المادة</th>
-                    <th>معامل</th>
-                    <th>ف1</th>
-                    <th>ف2</th>
-                    <th>ف3</th>
-                    <th>ف4</th>
-                    <th>أنشطة</th>
-                    <th>معدل</th>
+                    <th>Subject</th>
+                    <th>Coef</th>
+                    <th>ِC1</th><th>C2</th><th>C3</th><th>C4</th>
+                    <th>Activity</th>
+                    <th>Total</th>
                 </tr>
             </thead>
-            <tbody id="gradesTable">
-                <tr class="behavior-row">
-                    <td><strong>السلوك</strong></td>
-                    <td><span class="coef-badge">1</span></td>
-                    <td colspan="5">
-                        <input type="number" min="0" max="20" step="0.25" id="behavior-score" style="width: 80%" placeholder="0-20">
-                    </td>
-                    <td id="behavior-val" class="result-cell">-</td>
-                </tr>
-            </tbody>
+            <tbody id="gradesTable"></tbody>
         </table>
+
+        <div class="moyenne-display">
+            Semester Average: <span id="final-avg">0.00</span>
+        </div>
     </div>
 
-    <button class="btn-save" onclick="saveData()">حفظ النتائج ✓</button>
-
-    <div class="final-result-card">
-        <h3 style="margin:0; font-size: 18px;">المعدل العام</h3>
-        <span id="final-avg" class="score-value">00.00</span>
-        <span id="appreciation-text" class="appreciation">أدخل النقاط...</span>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
