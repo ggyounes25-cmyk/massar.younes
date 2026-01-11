@@ -1,0 +1,87 @@
+:root { --primary: #2c3e50; --accent: #3498db; --success: #27ae60; --gold: #f1c40f; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    background: #f0f2f5; 
+    margin: 0; 
+    padding: 10px; 
+    color: #333; 
+}
+
+.container { 
+    max-width: 1000px; 
+    margin: auto; 
+    background: white; 
+    padding: 15px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+}
+
+h2 { 
+    font-size: 1.2rem; 
+    color: var(--primary); 
+    border-right: 4px solid var(--accent); 
+    padding-right: 10px; 
+    margin-bottom: 20px; 
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+table { width: 100%; border-collapse: collapse; min-width: 600px; } 
+
+th { background: var(--primary); color: white; padding: 10px 5px; font-size: 12px; }
+td { border: 1px solid #eee; padding: 8px 5px; text-align: center; font-size: 14px; }
+
+input { 
+    width: 45px; 
+    padding: 8px 2px; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.coef-badge { background: #fff3cd; color: #856404; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+.result-cell { font-weight: bold; width: 60px; font-size: 14px; border: 1px solid #ddd; }
+.behavior-row { background: #f1f8ff; }
+
+.final-result-card { 
+    margin-top: 20px; 
+    padding: 20px; 
+    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); 
+    color: white; 
+    border-radius: 12px; 
+    text-align: center;
+}
+
+.score-value { font-size: 40px; font-weight: 900; color: var(--gold); display: block; margin: 10px 0; }
+.appreciation { font-size: 16px; font-weight: bold; opacity: 0.9; }
+
+.btn-save { 
+    background: var(--success); 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    font-size: 16px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    width: 100%; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    h2 { font-size: 1rem; }
+    .score-value { font-size: 32px; }
+    input { width: 40px; padding: 6px 2px; }
+}

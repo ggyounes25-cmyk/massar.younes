@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>منظومة نتائج - نسخة الهاتف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>نتائجي الدراسية (النسخة الاحترافية)</h2>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>المادة</th>
+                    <th>معامل</th>
+                    <th>ف1</th>
+                    <th>ف2</th>
+                    <th>ف3</th>
+                    <th>ف4</th>
+                    <th>أنشطة</th>
+                    <th>معدل</th>
+                </tr>
+            </thead>
+            <tbody id="gradesTable">
+                <tr class="behavior-row">
+                    <td><strong>السلوك</strong></td>
+                    <td><span class="coef-badge">1</span></td>
+                    <td colspan="5">
+                        <input type="number" min="0" max="20" step="0.25" id="behavior-score" style="width: 80%" placeholder="0-20">
+                    </td>
+                    <td id="behavior-val" class="result-cell">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="btn-save" onclick="saveData()">حفظ النتائج ✓</button>
+
+    <div class="final-result-card">
+        <h3 style="margin:0; font-size: 18px;">المعدل العام</h3>
+        <span id="final-avg" class="score-value">00.00</span>
+        <span id="appreciation-text" class="appreciation">أدخل النقاط...</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
