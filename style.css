@@ -1,87 +1,56 @@
-:root { --primary: #2c3e50; --accent: #3498db; --success: #27ae60; --gold: #f1c40f; }
-
-body { 
-    font-family: 'Segoe UI', Tahoma, sans-serif; 
-    background: #f0f2f5; 
-    margin: 0; 
-    padding: 10px; 
-    color: #333; 
+:root {
+    --primary: #00f2fe;
+    --gold: #ffd700;
+    --success: #00ff88;
+    --danger: #ff4d4d;
+    --glass: rgba(255, 255, 255, 0.05);
 }
 
-.container { 
-    max-width: 1000px; 
-    margin: auto; 
-    background: white; 
-    padding: 15px; 
-    border-radius: 15px; 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+body {
+    direction: rtl;
+    background: radial-gradient(circle at center, #1e293b, #0f172a);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0; padding: 10px;
 }
 
-h2 { 
-    font-size: 1.2rem; 
-    color: var(--primary); 
-    border-right: 4px solid var(--accent); 
-    padding-right: 10px; 
-    margin-bottom: 20px; 
-}
-
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 20px;
+/* المعامل الذهبي الفخم */
+.coef-badge {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(218, 165, 32, 0.2));
+    color: var(--gold);
+    padding: 4px 12px;
     border-radius: 8px;
-    border: 1px solid #eee;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
 }
 
-table { width: 100%; border-collapse: collapse; min-width: 600px; } 
-
-th { background: var(--primary); color: white; padding: 10px 5px; font-size: 12px; }
-td { border: 1px solid #eee; padding: 8px 5px; text-align: center; font-size: 14px; }
-
-input { 
-    width: 45px; 
-    padding: 8px 2px; 
-    border: 1px solid #ddd; 
-    border-radius: 6px; 
-    text-align: center; 
-    font-weight: bold; 
-    font-size: 14px; 
+.main-container {
+    max-width: 1100px; margin: auto;
+    background: var(--glass); border-radius: 20px;
+    padding: 20px; border: 1px solid rgba(255,255,255,0.1);
 }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-.coef-badge { background: #fff3cd; color: #856404; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; }
-.result-cell { font-weight: bold; width: 60px; font-size: 14px; border: 1px solid #ddd; }
-.behavior-row { background: #f1f8ff; }
+table { width: 100%; border-collapse: collapse; min-width: 750px; }
 
-.final-result-card { 
-    margin-top: 20px; 
-    padding: 20px; 
-    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); 
-    color: white; 
-    border-radius: 12px; 
-    text-align: center;
+th { padding: 12px; font-size: 12px; color: #94a3b8; }
+
+td { padding: 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+input[type="number"] {
+    background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+    color: white; padding: 8px; border-radius: 8px; width: 45px; text-align: center;
 }
 
-.score-value { font-size: 40px; font-weight: 900; color: var(--gold); display: block; margin: 10px 0; }
-.appreciation { font-size: 16px; font-weight: bold; opacity: 0.9; }
+.good { color: var(--success) !important; text-shadow: 0 0 8px rgba(0,255,136,0.3); }
+.bad { color: var(--danger) !important; text-shadow: 0 0 8px rgba(255,77,77,0.3); }
 
-.btn-save { 
-    background: var(--success); 
-    color: white; 
-    border: none; 
-    padding: 15px; 
-    font-size: 16px; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    width: 100%; 
-    font-weight: bold; 
-    margin-top: 10px;
+.final-result-card {
+    margin-top: 30px; text-align: center;
+    background: rgba(255,255,255,0.02); padding: 20px; border-radius: 20px;
 }
 
-@media (max-width: 480px) {
-    h2 { font-size: 1rem; }
-    .score-value { font-size: 32px; }
-    input { width: 40px; padding: 6px 2px; }
-}
+#final-avg { font-size: 3.5rem; font-weight: 800; display: block; }
